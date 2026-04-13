@@ -19,3 +19,9 @@ TEST(PasswordTest, single_letter_password)
 	Password my_password;
 	ASSERT_EQ(1, my_password.count_leading_characters("Z"));
 }
+
+TEST(PasswordTest, mixed_case_password)
+{
+	Password my_password;
+	ASSERT_EQ(1, my_password.count_leading_characters("ZZz"));
+}
