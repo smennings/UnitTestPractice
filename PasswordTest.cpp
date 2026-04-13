@@ -41,5 +41,5 @@ TEST(PasswordTest, mixed_case_letter_password)
 TEST(PasswordTest, mixed_case_pass)
 {
 	Password my_password;
-	ASSERT_TRUE(1, my_password.has_mixed_case("ZaA"));
+	ASSERT_TRUE(my_password.has_mixed_case("ZaA"));
 }
