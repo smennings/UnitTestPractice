@@ -41,5 +41,23 @@ TEST(PasswordTest, mixed_case_letter_password)
 TEST(PasswordTest, mixed_case_pass)
 {
 	Password my_password;
-	ASSERT_TRUE(my_password.has_mixed_case("ZaA"));
+	ASSERT_TRUE(my_password.has_mixed_case("Za"));
+}
+
+TEST(PasswordTest, mixed_letter_pass)
+{
+	Password my_password;
+	ASSERT_FALSE(my_password.has_mixed_case("ZA"));
+}
+
+TEST(PasswordTest, matching_case_pass)
+{
+	Password my_password;
+	ASSERT_FALSE(my_password.has_mixed_case("ZZ"));
+}
+
+TEST(PasswordTest, diff_case_pass)
+{
+	Password my_password;
+	ASSERT_TRUE(my_password.has_mixed_case("Zz"));
 }
