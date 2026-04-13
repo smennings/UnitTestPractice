@@ -24,15 +24,20 @@ int Password::count_leading_characters(string phrase){
   receives a string and returns whether it has both at least one upper-case
   letter and at least one lower-case letter
 */
-bool Password::has_mixed_case(string str){
-  bool found = false;
-  for(char c : str){
-    if( !found && c >= 'A' && c <= 'Z' ){
-      found = true;
+bool Password::has_mixed_case(string str)
+{
+  bool has_lower = false;
+  bool has_upper = false;
+  for (char ch : str)
+  {
+    if (std::islower(ch))
+    {
+      has_lower = true;
     }
-    else if( found && c >= 'a' && c <= 'z'){
-      return true;
+    else if (std::isupper(ch))
+    {
+      has_upper = true;
     }
   }
-  return false;
+  return has_lower && has_upper;
 }
