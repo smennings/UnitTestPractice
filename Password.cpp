@@ -116,3 +116,34 @@ bool Password::has_mixed_case(string str)
   return false;
 }
   */
+
+  unsigned int unique_characters(string s) {
+    int unique = 0;
+    vector<char> u;
+    bool isUnique;
+
+    if (s.length() == 0) {
+      return 0;
+    }
+
+    for (int i = 0; i < s.length(); i++) {
+      if (i == 0) {
+        u.push_back(s[0]);
+        unique++;
+      } else {
+        isUnique = true;
+
+        for (int j = 0; j < u.size(); j++) {
+          if (s[i] == u[j]) {
+            isUnique = false;
+          }
+        }
+
+        if (isUnique) {
+          u.push_back(s[i]);
+          unique++;
+        }
+      }
+    }
+    return unique;
+  }

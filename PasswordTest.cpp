@@ -73,3 +73,28 @@ TEST(PasswordTest, diff_case_pass)
 	Password my_password;
 	ASSERT_TRUE(my_password.has_mixed_case("Zz"));
 }
+
+TEST(PasswordTest, all_unique) {
+	Password my_password;
+	ASSERT_EQ(5, my_password.unique_characters("abcde"));
+}
+
+TEST(PasswordTest, no_unique) {
+	Password my_password;
+	ASSERT_EQ(1, my_password.unique_characters("aaaaa"))
+}
+
+TEST(PasswordTest, mixed_case) {
+	Password my_password;
+	ASSERT_EQ(2, my_password.unique_characters("aAaAaA"))
+}
+
+TEST(PasswordTest, with_symbols) {
+	Password my_password;
+	ASSERT_EQ(4, my_password.unique_characters("a%&b"))
+}
+
+TEST(PasswordTest, repetition) {
+	Password my_password;
+	ASSERT_EQ(3, my_password.unique_characters("abcba"))
+}
