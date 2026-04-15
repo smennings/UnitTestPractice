@@ -43,8 +43,9 @@ bool Password::has_mixed_case(string str)
   return has_lower && has_upper;
 }
 
-/*
+
 // Implementation B
+/*
 bool Password::has_mixed_case(string str)
 {
   int count_lower = 0;
@@ -57,7 +58,9 @@ bool Password::has_mixed_case(string str)
   }
   return count_lower > 0 && count_lower < str.length();
 }
+  */
 // Implementation C
+/*
 bool Password::has_mixed_case(string str)
 {
   bool lower = false;
@@ -75,7 +78,9 @@ bool Password::has_mixed_case(string str)
   }
   return upper && lower;
 }
+  */
 // Implementation D
+/*
 #include <cctype>
 bool Password::has_mixed_case(string str)
 {
@@ -94,7 +99,9 @@ bool Password::has_mixed_case(string str)
   }
   return is_lower && is_upper;
 }
+  */
 // Implementation E
+/*
 bool Password::has_mixed_case(string str)
 {
   bool found = false;
@@ -108,3 +115,4 @@ bool Password::has_mixed_case(string str)
   }
   return false;
 }
+  */
