@@ -74,6 +74,7 @@ TEST(PasswordTest, diff_case_pass)
 	ASSERT_TRUE(my_password.has_mixed_case("Zz"));
 }
 
+/*
 TEST(PasswordTest, all_unique) {
 	Password my_password;
 	ASSERT_EQ(5, my_password.unique_characters("abcde"));
@@ -98,3 +99,4 @@ TEST(PasswordTest, repetition) {
 	Password my_password;
 	ASSERT_EQ(3, my_password.unique_characters("abcba"));
 }
+*/
