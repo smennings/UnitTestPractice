@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-using std::string;
+using namespace std;
 
 /*
   The function receives a string counts how many times the same character 
