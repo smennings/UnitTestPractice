@@ -1,5 +1,6 @@
 #include "Password.h"
 #include <string>
+#include <vector>
 
 using std::string;
 
