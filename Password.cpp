@@ -119,7 +119,7 @@ bool Password::has_mixed_case(string str)
   */
 
   unsigned int unique_characters(string s) {
-    int unique = 0;
+    unsigned int unique = 0;
     vector<char> u;
     bool isUnique;
 
